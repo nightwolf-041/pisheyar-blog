@@ -1,0 +1,17 @@
+@font-face {
+    font-family: Yekan;
+    src: url('../assets/fonts/iran-yekan/iranyekan.woff2');
+}
+
+body {
+    margin: 0 auto;
+    font-family: Yekan !important;
+    overflow-x: hidden !important;
+}
+
+*,
+* * {
+    font-family: Yekan !important;
+}
+
+.404Title {}

@@ -1,0 +1,32 @@
+.gallery {
+    display: grid;
+    display: -ms-grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 5vw);
+    grid-gap: 15px;
+}
+
+.gridItem {
+    background-color: aqua;
+}
+
+.gridItem1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.gridItem2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 6;
+}
+
+.gridItem3 {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}

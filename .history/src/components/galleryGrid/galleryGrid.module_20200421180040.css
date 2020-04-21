@@ -1,0 +1,38 @@
+.gallery {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    display: -ms-grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 5vw);
+    grid-gap: 15px;
+}
+
+.gridItem {
+    background-color: aqua;
+}
+
+.gridItem1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column: 1 /4;
+    -ms-grid-column: 1 / 4;
+    grid-row: 1 / 4;
+    -ms-grid-row: 1 / 4;
+}
+
+.gridItem2 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 7;
+}
+
+.gridItem3 {
+    grid-column-start: 4;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 7;
+}

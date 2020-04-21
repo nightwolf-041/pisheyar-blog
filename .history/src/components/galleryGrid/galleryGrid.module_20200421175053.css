@@ -1,0 +1,13 @@
+.gallery {
+    display: grid;
+    display: -ms-grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 5vw);
+    grid-gap: 15px;
+}
+
+.gridItem1 {}
+
+.gridItem2 {}
+
+.gridItem3 {}
