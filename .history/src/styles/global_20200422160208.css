@@ -1,0 +1,72 @@
+@font-face {
+    font-family: Yekan;
+    src: url('../assets/fonts/iran-yekan/iranyekan.woff2');
+}
+
+body {
+    margin: 0 auto;
+    font-family: Yekan !important;
+    overflow-x: hidden !important;
+}
+
+*,
+* * {
+    font-family: Yekan !important;
+}
+
+.notfound-title {
+    margin-top: 150px;
+    text-align: right;
+}
+
+.notfound-subtitle {
+    text-align: right;
+}
+
+.swiper-container {
+    height: 360px !important;
+}
+
+.swiper-button-next {
+    background-color: rgb(36, 73, 141) !important;
+    border-radius: 100%;
+    margin-right: -50px;
+    cursor: pointer;
+    z-index: 2;
+    width: 90px !important;
+    height: 90px !important;
+}
+
+.swiper-button-next::before {
+    content: "";
+    position: absolute;
+    top: -180px;
+    right: 0;
+    width: 50px;
+    margin-right: 50px;
+    height: 300px;
+    background-image: linear-gradient(to left, #517bbb50, transparent);
+    z-index: 15;
+}
+
+.swiper-button-prev {
+    background-color: rgb(36, 73, 141) !important;
+    border-radius: 100%;
+    margin-left: -55px;
+    cursor: pointer;
+    z-index: 2;
+    width: 90px !important;
+    height: 90px !important;
+}
+
+.swiper-button-next:after {
+    font-size: 32px !important;
+    color: rgb(221, 149, 66);
+    margin-right: 32px;
+}
+
+.swiper-button-prev:after {
+    font-size: 32px !important;
+    color: rgb(221, 149, 66);
+    margin-left: 52px;
+}

@@ -1,0 +1,45 @@
+@font-face {
+    font-family: Yekan;
+    src: url('../assets/fonts/iran-yekan/iranyekan.woff2');
+}
+
+body {
+    margin: 0 auto;
+    font-family: Yekan !important;
+    overflow-x: hidden !important;
+}
+
+*,
+* * {
+    font-family: Yekan !important;
+}
+
+.notfound-title {
+    margin-top: 150px;
+    text-align: right;
+}
+
+.notfound-subtitle {
+    text-align: right;
+}
+
+.swiper-container {
+    height: 360px !important;
+}
+
+.swiper-button-next {
+    background-color: rgb(36, 73, 141) !important;
+    /* padding: 25px 32px; */
+    border-radius: 100%;
+    /* margin-right: -45px; */
+    cursor: pointer;
+    z-index: 2;
+    width: 70px !important;
+    height: 70px !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 32px !important;
+    color: rgb(221, 149, 66);
+}

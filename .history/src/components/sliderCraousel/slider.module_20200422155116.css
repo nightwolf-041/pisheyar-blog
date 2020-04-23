@@ -1,0 +1,142 @@
+.mainCarousel {
+    width: 100%;
+    /* height: 400px; */
+    margin-top: 80px;
+    position: relative;
+}
+
+.mainCarousel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 98%;
+    background-image: linear-gradient(to right, #517bbb50, transparent);
+    z-index: 5;
+}
+
+.mainCarousel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 98%;
+    background-image: linear-gradient(to left, #517bbb50, transparent);
+    z-index: 5;
+}
+
+.carouselCell {
+    margin-right: 30px !important;
+    position: relative;
+    width: 320px;
+    height: 350px;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: carouselCell;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    overflow: hidden;
+    /* margin-top: 70px; */
+}
+
+.carouselCellImagebox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.carouselCellImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carouselCellTitle {
+    position: absolute;
+    top: 220px;
+    left: 5%;
+    width: 90%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 5px 15px; */
+}
+
+.carouselCellTitle h4 {
+    color: #383838;
+    text-align: center;
+    line-height: 28px;
+}
+
+.carouselCellInfo {
+    position: absolute;
+    top: 290px;
+    left: 5%;
+    width: 90%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carouselCellInfoDate {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.carouselCellInfoDateIcon {
+    color: #999999;
+    font-size: 14px;
+}
+
+.carouselCellInfoDateCount {
+    color: #666666;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.carouselCellInfoSender {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.carouselCellInfoSender span {
+    color: #666666;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.carouselCellInfoSenderImage {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carouselCellInfoSenderImage img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
