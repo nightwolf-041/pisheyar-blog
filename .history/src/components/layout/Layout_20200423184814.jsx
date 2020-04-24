@@ -1,0 +1,91 @@
+import React, {useState, useEffect} from 'react';
+import PropTypes from 'prop-types';
+import {  useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Footer from '../../components/footer/Footer'
+import { faGoogle, faWhatsapp, faTelegramPlane, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faSearch, faLocationArrow, faPhoneAlt, faRss, faSitemap } from "@fortawesome/free-solid-svg-icons";
+
+import classes from './Layout.module.css'
+import './Layout.css'
+
+function Layout({ title, children }) {
+	const { home, footer } = useStaticQuery(
+		graphql`
+			query {
+				home: file(absolutePath: { regex: "/home-icon.png/" }) {
+					childImageSharp {
+						fixed(width: 60) {
+							...GatsbyImageSharpFixed
+						}
+					}
+				}
+				footer: file(absolutePath: { regex: "/home-icon.png/" }) {
+					childImageSharp {
+						fixed(width: 110) {
+							...GatsbyImageSharpFixed
+						}
+					}
+				}
+			}
+		`
+	);
+
+	const homeIcon = home.childImageSharp.fixed;
+	const homeIconFooter = footer.childImageSharp.fixed;
+
+	const items = [
+		{id: 1, name: 'خانه'},
+		{id: 2, name: 'دسته بندی', dropdown: [
+			{id: 21, name: 'صنعتی'},
+			{id: 22, name: 'ورزشی'},
+			{id: 23, name: 'هنری'},
+		]},
+		{id: 3, name: 'فیلم'},
+		{id: 3, name: 'اخبار'},
+		{id: 3, name: 'سایت پیشه یار'},
+		{id: 3, name: 'درباره ما'},
+	]
+
+	
+	
+	return (
+		//TODO: create footer and nav component
+		<>
+			
+            
+			<main className={classes.blogMain}>
+				{children}
+			</main>
+
+			<Footer />
+		</>
+	);
+}
+
+{/* <Link to="#" className={classes.navbarIconLink} title="telegram">
+	<FontAwesomeIcon icon={faTelegram} style={{width: '50px'}} />
+</Link>
+<Link to="#" className={classes.navbarIconLink} title="instagram">
+	<FontAwesomeIcon icon={faInstagram} style={{width: '50px'}} />
+</Link>
+<Link to="#" className={classes.navbarIconLink} title="gmail">
+	<FontAwesomeIcon icon={faGoogle} style={{width: '50px'}} />
+</Link>
+<Link to="#" className={classes.navbarIconLink} title="twitter">
+	<FontAwesomeIcon icon={faTwitter} style={{width: '50px'}} />
+</Link> */}
+{/* <div className={classes.homeLinkContainer}>
+	{title !== 'وبلاگ پیشه یار' && (
+		<Link to="/">
+			<Img fluid={homeIcon} alt="بازگشت به صفحه اصلی" />
+		</Link>
+	)}
+</div> */}
+
+Layout.propTypes = {
+	title: PropTypes.string.isRequired,
+};
+
+export default Layout;
