@@ -1,0 +1,80 @@
+.contactusBottom {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 45px 0;
+}
+
+.contactusBottomTitle {
+    text-align: center;
+    /* font-size: 21px; */
+    color: #0b1033;
+    margin: 0;
+}
+
+.contactusBottomSubtitle {
+    text-align: center;
+    font-size: 16px;
+    color: rgba(11, 16, 51, 0.7);
+    margin: 0 0 10px 0;
+}
+
+.contactusBottomInputBox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.contactusBottomInputBoxButton {
+    width: 80px;
+    padding: 8px 10px;
+    background-color: #0b1033;
+    color: #ffd617;
+    font-size: 15px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.contactusBottomInputBoxInput {
+    /* direction: rtl; */
+    width: 300px;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(11, 16, 51, 0.7);
+    outline: none;
+}
+
+::placeholder {
+    color: rgba(11, 16, 51, 0.7);
+    font-size: 14px;
+    text-align: right;
+}
+
+.contactusBottomInputBoxInput::placeholder {
+    color: rgba(11, 16, 51, 0.7);
+    font-size: 14px;
+    text-align: right;
+}
+
+@media screen and (max-width: 576px) {
+    .contactusBottomInputBox {
+        flex-direction: column-reverse;
+    }
+    .contactusBottomInputBoxButton {
+        width: 270px;
+        margin-top: 5px;
+        margin-right: 0;
+    }
+    .contactusBottomInputBoxInput {
+        width: 270px;
+    }
+}

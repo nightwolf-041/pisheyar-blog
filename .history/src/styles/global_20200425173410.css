@@ -1,0 +1,36 @@
+@font-face {
+    font-family: Yekan;
+    src: url('../assets/fonts/iran-yekan/iranyekan.woff2');
+}
+
+body {
+    margin: 0 auto;
+    font-family: Yekan !important;
+    overflow-x: hidden !important;
+}
+
+*,
+* * {
+    font-family: Yekan !important;
+}
+
+
+/*TODO: prefix */
+
+.gallery-slider-divider {
+    overflow: hidden;
+    position: relative;
+    text-align: right;
+    width: 80%;
+    margin: 60px auto 45px auto;
+}
+
+.gallery-slider-divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 150px;
+    width: 80%;
+    height: 1px;
+    background-color: #ccc;
+}

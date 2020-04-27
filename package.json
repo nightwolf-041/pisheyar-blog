@@ -43,11 +43,13 @@
         "prop-types": "^15.7.2",
         "rc-pagination": "^2.2.0",
         "react": "^16.12.0",
+        "react-custom-scrollbars": "^4.2.1",
         "react-dom": "^16.12.0",
         "react-helmet": "^6.0.0",
         "react-id-swiper": "^3.0.0",
         "react-masonry-component": "^6.2.1",
         "react-masonry-css": "^1.0.14",
+        "react-perfect-scrollbar": "^1.5.8",
         "swiper": "^5.3.7"
     },
     "devDependencies": {
@@ -61,7 +63,9 @@
         "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
     },
     "browserslist": [
-        ">0.25%",
-        "not dead"
+        "> 2%",
+        "not dead",
+        "last 2 versions",
+        "Firefox ESR"
     ]
 }

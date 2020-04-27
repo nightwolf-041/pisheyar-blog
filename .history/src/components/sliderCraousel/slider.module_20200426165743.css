@@ -1,0 +1,114 @@
+.carouselCell {
+    position: relative;
+    width: 320px;
+    height: 370px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: carouselCell;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(11, 16, 51, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.carouselCellImagebox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 220px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.carouselCellImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carouselCellTitle {
+    position: absolute;
+    top: 14.8rem;
+    left: 5%;
+    width: 90%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* padding: 5px 15px; */
+}
+
+.carouselCellTitle h4 {
+    color: #0b1033;
+    text-align: center;
+    font-size: 0.98rem;
+    line-height: 22px;
+}
+
+.carouselCellInfo {
+    position: absolute;
+    top: 314px;
+    left: 5%;
+    width: 90%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carouselCellInfoDate {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.carouselCellInfoDateIcon {
+    color: #999999;
+    font-size: 14px;
+}
+
+.carouselCellInfoDateCount {
+    direction: rtl;
+    color: rgba(11, 16, 51, 0.7);
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.carouselCellInfoSender {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.carouselCellInfoSender span {
+    color: rgba(11, 16, 51, 0.7);
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.carouselCellInfoSenderImage {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carouselCellInfoSenderImage img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
