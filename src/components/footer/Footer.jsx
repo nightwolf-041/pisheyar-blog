@@ -1,5 +1,5 @@
 import React from 'react';
-import {  useStaticQuery, graphql } from 'gatsby';
+import {  useStaticQuery, graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle, faWhatsapp, faTelegramPlane, faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -11,9 +11,9 @@ const Footer = () => {
     const { footer } = useStaticQuery(
 		graphql`
 			query {
-				footer: file(absolutePath: { regex: "/home-icon.png/" }) {
+				footer: file(absolutePath: { regex: "/logo-yellow.png/" }) {
 					childImageSharp {
-						fixed(width: 110) {
+						fixed(width: 185) {
 							...GatsbyImageSharpFixed
 						}
 					}
@@ -32,12 +32,22 @@ const Footer = () => {
                     <a className={classes.footerTopMenuItem}>گالری</a>
                     <a className={classes.footerTopMenuItem}>فیلم</a>
                     <a className={classes.footerTopMenuItem}>اخبار</a>
-                    <Img fixed={homeIconFooter} alt="پیشه یار" className={classes.footerTopImage} />
+                    <Img
+                    fixed={homeIconFooter}
+                    objectFit="cover"
+                    objectPosition="50% 50%"
+                    alt="پیشه یار"
+                    className={classes.footerTopImage} />
                     <a className={classes.footerTopMenuItem}>سایت پیشه یار</a>
-                    <a className={classes.footerTopMenuItem}>ارتباط با ما</a>
+                    <a className={classes.footerTopMenuItemML}>ارتباط با ما</a>
                 </div>
                 <div className={classes.footerTopMobile}>
-                    <Img fixed={homeIconFooter} alt="پیشه یار" className={classes.footerTopMobileImage} />
+                    <Img
+                    fixed={homeIconFooter}
+                    objectFit="cover"
+                    objectPosition="50% 50%"
+                    alt="پیشه پلاس"
+                    className={classes.footerTopMobileImage} />
                     <div className={classes.footerTopMobileItemsBox}>
                         <a className={classes.footerTopMobileMenuItem}>خانه</a>
                         <a className={classes.footerTopMobileMenuItem}>گالری</a>
@@ -49,20 +59,25 @@ const Footer = () => {
                 </div>
                 <div className={classes.footerMiddleBox}>
                     <div className={classes.footerMiddleRight}>
-                        <FontAwesomeIcon icon={faLocationArrow}
+                        {/* <FontAwesomeIcon icon={faLocationArrow}
                             className={classes.footerMiddleRightIcon} />
                         <div className={classes.footerMiddRightTexts}>
                             آزادشهر، خیابان همایونی، نبش کوچه سوم، پلاک 25
-                        </div>
+                        </div> */}
+                         <FontAwesomeIcon icon={faPhoneAlt}
+                            className={classes.footerMiddleRightIcon} />
+                        <span className={classes.footerMiddLeftText}>
+                            +98 910 834 7428
+                        </span>
                     </div>
                     <div className={classes.footerMiddleLeft}>
-                        <div className={classes.footerMiddleLeftSection}>
+                        {/* <div className={classes.footerMiddleLeftSection}>
                             <FontAwesomeIcon icon={faPhoneAlt}
                                 className={classes.footerMiddleLeftIcon} />
                             <span className={classes.footerMiddLeftText}>
                                 +98 910 834 7428
                             </span>
-                        </div>
+                        </div> */}
                         <div className={classes.footerMiddleLeftSection}>
                             <FontAwesomeIcon icon={faGoogle}
                                 className={classes.footerMiddleLeftIcon} />
@@ -75,22 +90,27 @@ const Footer = () => {
                 <div className={classes.footerMiddleBoxMobile}>
                     <div className={classes.footerMiddleBoxMobileRow}>
                         <div className={classes.footerMiddleRight}>
-                            <FontAwesomeIcon icon={faLocationArrow}
+                            {/* <FontAwesomeIcon icon={faLocationArrow}
                                 className={classes.footerMiddleRightIcon} />
                             <div className={classes.footerMiddRightTexts}>
-                                آزادشهر، خیابان همایونی، نبش کوچه سوم، پلاک 25
-                            </div>
+                            به زودی
+                            </div> */}
+                             <FontAwesomeIcon icon={faPhoneAlt}
+                            className={classes.footerMiddleRightIcon} />
+                            <span className={classes.footerMiddLeftText}>
+                                +98 910 834 7428
+                            </span>
                         </div>
                     </div>
                     <div className={classes.footerMiddleBoxMobileRow2}>
                         <div className={classes.footerMiddleLeft}>
-                            <div className={classes.footerMiddleLeftSection}>
+                            {/* <div className={classes.footerMiddleLeftSection}>
                                 <FontAwesomeIcon icon={faPhoneAlt}
                                     className={classes.footerMiddleLeftIcon} />
                                 <span className={classes.footerMiddLeftText}>
                                     +98 910 834 7428
                                 </span>
-                            </div>
+                            </div> */}
                             <div className={classes.footerMiddleLeftSection}>
                                 <FontAwesomeIcon icon={faGoogle}
                                     className={classes.footerMiddleLeftIcon} />
@@ -103,27 +123,27 @@ const Footer = () => {
                 </div>
                 <div className={classes.footerTopDivider}></div>
                 <div className={classes.footerSocialBox}>
-                    <div className={classes.footerSocialItem}>
+                    <Link to="/sitemap.xml" className={classes.footerSocialItem}>
                         <span className={classes.footerSocialItemSpan}>
                             SITEMAP
                         </span>
                         <FontAwesomeIcon icon={faSitemap}
                             className={classes.footerSocialItemIcon} />
-                    </div>
-                    <div className={classes.footerSocialItem}>
+                    </Link>
+                    <Link to="/rss.xml" className={classes.footerSocialItem}>
                         <span className={classes.footerSocialItemSpan}>
                             RSS FEED
                         </span>
                         <FontAwesomeIcon icon={faRss}
                             className={classes.footerSocialItemIcon} />
-                    </div>
-                    <div className={classes.footerSocialItem}>
+                    </Link>
+                    <a href="mailto:info@pisheplus.com" className={classes.footerSocialItem}>
                         <span className={classes.footerSocialItemSpan}>
                             ایمیل
                         </span>
                         <FontAwesomeIcon icon={faGoogle}
                             className={classes.footerSocialItemIcon} />
-                    </div>
+                    </a>
                     <div className={classes.footerSocialItem}>
                         <span className={classes.footerSocialItemSpan}>
                             واتساپ
@@ -138,13 +158,13 @@ const Footer = () => {
                         <FontAwesomeIcon icon={faTelegramPlane}
                             className={classes.footerSocialItemIcon} />
                     </div>
-                    <div className={classes.footerSocialItem}>
+                    <a href="https://www.instagram.com/pisheplus" className={classes.footerSocialItem}>
                         <span className={classes.footerSocialItemSpan}>
                             اینستاگرام
                         </span>
                         <FontAwesomeIcon icon={faInstagram}
                             className={classes.footerSocialItemIcon} />
-                    </div>
+                    </a>
                 </div>
                 <div className={classes.footerSocialBoxMobile}>
                     <div className={classes.footerSocialBoxMobileColumn}>
@@ -162,36 +182,36 @@ const Footer = () => {
                             <FontAwesomeIcon icon={faTelegramPlane}
                                 className={classes.footerSocialItemIcon} />
                         </div>
-                        <div className={classes.footerSocialItem}>
+                        <a href="https://www.instagram.com/pisheplus" className={classes.footerSocialItem}>
                             <span className={classes.footerSocialItemSpan}>
                                 اینستاگرام
                             </span>
                             <FontAwesomeIcon icon={faInstagram}
                                 className={classes.footerSocialItemIcon} />
-                        </div>
+                        </a>
                     </div>
                     <div className={classes.footerSocialBoxMobileColumn}>
-                        <div className={classes.footerSocialItem}>
+                        <Link to="/sitemap.xml" className={classes.footerSocialItem}>
                             <span className={classes.footerSocialItemSpan}>
                                 SITEMAP
                             </span>
                             <FontAwesomeIcon icon={faSitemap}
                                 className={classes.footerSocialItemIcon} />
-                        </div>
-                        <div className={classes.footerSocialItem}>
+                        </Link>
+                        <Link to="/rss.xml" className={classes.footerSocialItem}>
                             <span className={classes.footerSocialItemSpan}>
                                 RSS FEED
                             </span>
                             <FontAwesomeIcon icon={faRss}
                                 className={classes.footerSocialItemIcon} />
-                        </div>
-                        <div className={classes.footerSocialItem}>
+                        </Link>
+                        <a href="mailto:info@pisheplus.com"v className={classes.footerSocialItem}>
                             <span className={classes.footerSocialItemSpan}>
                                 ایمیل
                             </span>
                             <FontAwesomeIcon icon={faGoogle}
                                 className={classes.footerSocialItemIcon} />
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div className={classes.footerBottomDivider}></div>

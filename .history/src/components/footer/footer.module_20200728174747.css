@@ -1,0 +1,323 @@
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: #0b1033;
+}
+
+.footerContainer {
+    width: 100%;
+    height: auto;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footerTopMobile {
+    display: none;
+}
+
+.footerTopMobileItemsBox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footerTopMobileMenuItem {
+    margin: 5px 22px;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footerTopMobileMenuItem:hover {
+    color: #ffd617;
+    text-decoration: none;
+}
+
+.footerTopMobileMenuItem:nth-child(6) {
+    margin-left: 45px;
+}
+
+.footerTopMobileImage {
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.footerTop {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-start;
+    color: #ffffff;
+    padding-top: 20px;
+    position: relative !important;
+}
+
+.footerTopMenuItem {
+    margin: 0 22px;
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footerTopMenuItem:hover {
+    color: #ffd617;
+    text-decoration: none;
+}
+
+.footerTopImage {
+    margin: 0 25px;
+}
+
+.footerMiddleBoxMobile {
+    display: none;
+}
+
+.footerMiddleBox {
+    /* width: 100%; */
+    width: 80%;
+    height: auto;
+    margin-top: -30px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    /* justify-content: space-around; */
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footerMiddleRight {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footerMiddleRightIcon {
+    color: #ffffff98;
+    width: 45px;
+    margin-left: 15px;
+}
+
+.footerMiddRightTexts {
+    font-size: 14px;
+    width: 60%;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #ffffff98;
+}
+
+.footerMiddleLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footerMiddleLeftSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footerMiddleLeftIcon {
+    color: #ffffff98;
+    width: 45px;
+    margin-right: 15px;
+}
+
+.footerMiddLeftText {
+    color: #ffffff98;
+    text-align: left;
+    font-size: 14px;
+}
+
+.footerTopDivider {
+    width: 90%;
+    height: 1px;
+    background-color: #ffffff2f;
+    margin: 45px auto 10px auto;
+}
+
+.footerSocialBoxMobile {
+    display: none;
+}
+
+.footerSocialBox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border-bottom: 1px solid rgb(145, 145, 145); */
+}
+
+.footerSocialItem {
+    margin: 5px 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.footerSocialItemSpan {
+    color: #ffffff98;
+    font-size: 16px;
+}
+
+.footerSocialItemIcon {
+    width: 45px;
+    color: #ffffff98;
+    margin-left: 12px;
+}
+
+.footerBottomDivider {
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff2f;
+    margin: 10px auto 10px auto;
+}
+
+.footerBottom {
+    width: 95%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.footerBottomText {
+    color: #ffffff98;
+    text-align: right;
+    direction: rtl;
+}
+
+@media screen and (max-width: 992px) {
+    .footerTopMobile {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 80px;
+    }
+    .footerTop {
+        display: none;
+    }
+    .footerMiddleBox {
+        display: none;
+    }
+    .footerMiddleBoxMobile {
+        /* width: 100%; */
+        width: 90%;
+        height: auto;
+        margin-top: -30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* justify-content: space-around; */
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footerMiddleBoxMobileRow {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .footerMiddleBoxMobileRow2 {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .footerMiddLeftTexts,
+    .footerMiddRightTexts {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footerMiddleBox {
+        flex-direction: column;
+        width: 95%;
+    }
+    .footerMiddleRight,
+    .footerMiddleRight {
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    .footerMiddLeftTexts,
+    .footerMiddRightTexts {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 532px) {
+    .footerSocialBoxMobile {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .footerSocialBoxMobileColumn {
+        /* width: 50%; */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin: 0 15px;
+    }
+    .footerSocialItemSpan {
+        font-size: 14px;
+    }
+    .footerSocialBox {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footerBottom {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 30px;
+        padding-bottom: 5px;
+    }
+    .footerBottomText {
+        margin: 0;
+    }
+    .footerTopMobileItemsBox {
+        justify-content: space-evenly;
+    }
+    .footerMiddleBoxMobileRow {
+        justify-content: center;
+    }
+    .footerMiddleBoxMobileRow2 {
+        justify-content: center;
+    }
+    .footerMiddleRight,
+    .footerMiddleRight {
+        justify-content: center;
+    }
+}
