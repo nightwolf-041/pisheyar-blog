@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
-import Img from "gatsby-image"
-import HeaderSubmenu from "../headerSubmenu/HeaderSubmenu"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faSearch, faBars } from "@fortawesome/free-solid-svg-icons"
+import React, { useState, useEffect } from 'react';
+import { useStaticQuery, graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
+import HeaderSubmenu from '../headerSubmenu/HeaderSubmenu';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faBars } from '@fortawesome/free-solid-svg-icons';
 
-import classes from "./singleHeader.module.css"
+import classes from './singleHeader.module.css';
 
 const SingleHeader = (props) => {
   const { header } = useStaticQuery(
@@ -20,14 +20,14 @@ const SingleHeader = (props) => {
         }
       }
     `
-  )
+  );
 
-  const headerIcon = header.childImageSharp.fixed
+  const headerIcon = header.childImageSharp.fixed;
 
-  const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(false);
   const toggleSubmenu = () => {
-    setToggle((toggle) => !toggle)
-  }
+    setToggle((toggle) => !toggle);
+  };
 
   return (
     <>
@@ -93,7 +93,7 @@ const SingleHeader = (props) => {
         </div>
       </header>
     </>
-  )
-}
+  );
+};
 
-export default SingleHeader
+export default SingleHeader;

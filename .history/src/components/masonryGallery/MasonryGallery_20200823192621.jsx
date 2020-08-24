@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from "react"
-import axios from "axios"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 // import Img from 'gatsby-image';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faWhatsapp,
   faTelegramPlane,
   faInstagram,
-} from "@fortawesome/free-brands-svg-icons"
+} from '@fortawesome/free-brands-svg-icons';
 import {
   faHeart,
   faBolt,
   faCaretSquareRight,
-} from "@fortawesome/free-solid-svg-icons"
+} from '@fortawesome/free-solid-svg-icons';
 // import Masonry from 'react-masonry-component';
-import Pagination from "rc-pagination"
-import Masonry from "react-masonry-css"
+import Pagination from 'rc-pagination';
+import Masonry from 'react-masonry-css';
 
-import classes from "./masonryGallery.module.css"
-import "rc-pagination/assets/index.css"
+import classes from './masonryGallery.module.css';
+import 'rc-pagination/assets/index.css';
 
 const MasonryGallery = () => {
   const { allRestApiPostGetAllAnonymous } = useStaticQuery(
@@ -49,42 +49,42 @@ const MasonryGallery = () => {
         }
       }
     `
-  )
-  const data = [...allRestApiPostGetAllAnonymous.edges]
-  let posts = [...data[0].node.posts]
+  );
+  const data = [...allRestApiPostGetAllAnonymous.edges];
+  let posts = [...data[0].node.posts];
   // console.log(posts);
 
-  let [runtimeData, setRuntimeData] = useState([])
-  let [currentPage, setCurrentPage] = useState(1)
-  let [jumpValue, setJumpValue] = useState(null)
+  let [runtimeData, setRuntimeData] = useState([]);
+  let [currentPage, setCurrentPage] = useState(1);
+  let [jumpValue, setJumpValue] = useState(null);
 
   useEffect(() => {
     axios
-      .get("http://185.211.59.237/Post/GetAllAnonymous")
+      .get('http://185.211.59.237/Post/GetAllAnonymous')
       .then((res) => {
-        console.log(res.data.posts)
-        setRuntimeData(res.data.posts)
+        console.log(res.data.posts);
+        setRuntimeData(res.data.posts);
       })
-      .catch((err) => {})
-  }, [])
+      .catch((err) => {});
+  }, []);
 
   const paginationChangeHandler = (current, pageIndex) => {
-    setCurrentPage(current)
-  }
+    setCurrentPage(current);
+  };
 
   const breakpointColumnsObj = {
     default: 3,
     1150: 2,
     760: 1,
-  }
+  };
 
   const paginationJumpChange = (e) => {
-    setJumpValue(e.target.value)
-  }
+    setJumpValue(e.target.value);
+  };
 
   const paginationJumpHandler = () => {
-    setCurrentPage(jumpValue)
-  }
+    setCurrentPage(jumpValue);
+  };
 
   return (
     <>
@@ -162,7 +162,7 @@ const MasonryGallery = () => {
               <div className={classes.masonryPostInfo}>
                 <span className={classes.masonryPostInfoWhriter}>
                   {post.userFullName}
-                </span>{" "}
+                </span>{' '}
                 __
                 <span className={classes.masonryPostInfoDate}>
                   {post.modifiedDate}
@@ -186,7 +186,7 @@ const MasonryGallery = () => {
           ))}
       </Masonry>
     </>
-  )
-}
+  );
+};
 
-export default MasonryGallery
+export default MasonryGallery;

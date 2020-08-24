@@ -59,45 +59,44 @@
 //     })
 // }
 
-exports.createPages = async function({ actions, graphql }) {
-    const { data } = await graphql(`
-      query {
-        allRestApiApiPostGetAllAnonymous {
-            edges {
-            node {
-                posts {
-                postGuid
-                userFullName
-                postViewCount
-                postLikeCount
-                postTitle
-                postAbstract
-                postDescription
-                postCreateDate
-                postModifyDate
-                postIsShow
-                slug
-                }
+exports.createPages = async function ({ actions, graphql }) {
+  const { data } = await graphql(`
+    query {
+      allRestApiApiPostGetAllAnonymous {
+        edges {
+          node {
+            posts {
+              postGuid
+              userFullName
+              postViewCount
+              postLikeCount
+              postTitle
+              postAbstract
+              postDescription
+              postCreateDate
+              postModifyDate
+              postIsShow
+              slug
             }
-            }
+          }
         }
       }
-    `)
-    const graphPosts = data.allRestApiApiPostGetAllAnonymous.edges
-    let posts = [...graphPosts[0].node.posts]
+    }
+  `);
+  const graphPosts = data.allRestApiApiPostGetAllAnonymous.edges;
+  let posts = [...graphPosts[0].node.posts];
 
-    posts.forEach((post, index) => {
+  posts.forEach((post, index) => {
+    const previous = index === 0 ? null : posts[index - 1];
+    const next = index === posts.length - 1 ? null : posts[index + 1];
 
-        const previous = index === 0 ? null : posts[index - 1]
-        const next = index === posts.length - 1 ? null : posts[index + 1]
-
-        actions.createPage({
-            path: post.slug,
-            component: require.resolve(`./src/templates/Post.js`),
-            context: {
-                slug: post.slug,
-                post: post
-            },
-        })
-    })
-}
+    actions.createPage({
+      path: post.slug,
+      component: require.resolve(`./src/templates/Post.js`),
+      context: {
+        slug: post.slug,
+        post: post,
+      },
+    });
+  });
+};

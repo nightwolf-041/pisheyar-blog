@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react"
-import { useStaticQuery, graphqlm, Link } from "gatsby"
-import Img from "gatsby-image"
-import HeaderSubmenu from "../headerSubmenu/HeaderSubmenu"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faSearch, faBars, faHeart } from "@fortawesome/free-solid-svg-icons"
+import React, { useState, useEffect } from 'react';
+import { useStaticQuery, graphqlm, Link } from 'gatsby';
+import Img from 'gatsby-image';
+import HeaderSubmenu from '../headerSubmenu/HeaderSubmenu';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faBars, faHeart } from '@fortawesome/free-solid-svg-icons';
 
-import classes from "./header.module.css"
+import classes from './header.module.css';
 
 const Header = (props) => {
   const { header } = useStaticQuery(
@@ -20,27 +20,27 @@ const Header = (props) => {
         }
       }
     `
-  )
+  );
 
-  const headerIcon = header.childImageSharp.fixed
+  const headerIcon = header.childImageSharp.fixed;
 
-  const [unmount, setUnmount] = useState(false)
-  const [state, setState] = useState(true)
-  const [toggle, setToggle] = useState(false)
+  const [unmount, setUnmount] = useState(false);
+  const [state, setState] = useState(true);
+  const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
-    setUnmount(false)
-    document.addEventListener("scroll", () => {
-      const isTop = window.scrollY < 100
+    setUnmount(false);
+    document.addEventListener('scroll', () => {
+      const isTop = window.scrollY < 100;
       if (isTop !== state) {
-        setState(isTop)
+        setState(isTop);
       }
-    })
-  }, [state])
+    });
+  }, [state]);
 
   const toggleSubmenu = () => {
-    setToggle((toggle) => !toggle)
-  }
+    setToggle((toggle) => !toggle);
+  };
 
   return (
     <>
@@ -120,7 +120,7 @@ const Header = (props) => {
         </div>
       </header>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

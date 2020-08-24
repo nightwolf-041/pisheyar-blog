@@ -1,126 +1,131 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faSearchengin } from "@fortawesome/free-brands-svg-icons";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-import classes from './Layout.module.css'
-import './Layout.css'
+import classes from './Layout.module.css';
+import './Layout.css';
 
 function Layout({ title, children }) {
-	const { home } = useStaticQuery(
-		graphql`
-		query {
-			home: file(absolutePath: { regex: "/home-icon.png/" }) {
-				childImageSharp {
-					fixed(width: 60) {
-						src
-					}
-				}
-			}
-	        footer: file(absolutePath: { regex: "/home-icon.png/" }) {
-				childImageSharp {
-					fixed(width: 80) {
-						src
-					}
-				}
-			}
-		}
-		`
-	);
+  const { home } = useStaticQuery(
+    graphql`
+      query {
+        home: file(absolutePath: { regex: "/home-icon.png/" }) {
+          childImageSharp {
+            fixed(width: 60) {
+              src
+            }
+          }
+        }
+        footer: file(absolutePath: { regex: "/home-icon.png/" }) {
+          childImageSharp {
+            fixed(width: 80) {
+              src
+            }
+          }
+        }
+      }
+    `
+  );
 
-	const homeIcon = home.childImageSharp.fixed;
+  const homeIcon = home.childImageSharp.fixed;
 
-	const items = [
-		{id: 1, name: 'خانه'},
-		{id: 2, name: 'دسته بندی', dropdown: [
-			{id: 21, name: 'صنعتی'},
-			{id: 22, name: 'ورزشی'},
-			{id: 23, name: 'هنری'},
-		]},
-		{id: 3, name: 'فیلم'},
-		{id: 3, name: 'اخبار'},
-		{id: 3, name: 'سایت پیشه یار'},
-		{id: 3, name: 'درباره ما'},
-	]
+  const items = [
+    { id: 1, name: 'خانه' },
+    {
+      id: 2,
+      name: 'دسته بندی',
+      dropdown: [
+        { id: 21, name: 'صنعتی' },
+        { id: 22, name: 'ورزشی' },
+        { id: 23, name: 'هنری' },
+      ],
+    },
+    { id: 3, name: 'فیلم' },
+    { id: 3, name: 'اخبار' },
+    { id: 3, name: 'سایت پیشه یار' },
+    { id: 3, name: 'درباره ما' },
+  ];
 
-	const [state, setState] = useState(true)
+  const [state, setState] = useState(true);
 
-	useEffect(() => {
-		document.addEventListener('scroll', () => {
-			const isTop = window.scrollY < 100;
-			if (isTop !== state) {
-				setState(isTop)
-			}
-		  });
-	}, [state])
-	
-	return (
-		<>
-			<header className={state ? classes.header : classes.headerToggle}>
-				
-				{state ? 
-					<div className={classes.headerTop}>
-						<Img fixed={homeIcon} alt="پیشه یار" />
-					</div>
-					:null
-				}
-				<div className={state ? classes.headerBottom : classes.headerBottomToggle}>
-					{state ?
-						<div className={classes.headerBottomEmptyDiv}></div> 
-						: 
-						<Img fixed={homeIcon} alt="پیشه یار" />
-					}
-					<nav className={classes.nav}>
-						<ul className={classes.navMenu}>
-							{items.map(item => (
-								<li className={classes.navMenuItem}>
-									<a className={classes.navMenuItemLink}>{item.name}</a>
-									<ul className={classes.navSubmenu}>
-										{item.dropdown ?
-											item.dropdown.map(drop => (
-												<li className={classes.navSubmenuItem}>
-													<a className={classes.navSubmenuItemLink}>
-														{drop.name}
-													</a>
-												</li>
-											))
-										: null
-										}
-									</ul>
-								</li>
-							))}
-						</ul>
-					</nav>
-					{/* <div className={classes.navbarIcons}> */}
-						<FontAwesomeIcon icon={faSearch} className={classes.headerSearchIcon} />
-					{/* </div> */}
-				</div>
-			</header>
-            
-			<main className={classes.blogMain}>
-				{children}
-			</main>
+  useEffect(() => {
+    document.addEventListener('scroll', () => {
+      const isTop = window.scrollY < 100;
+      if (isTop !== state) {
+        setState(isTop);
+      }
+    });
+  }, [state]);
 
-			<footer className={classes.footer}>
-                <div className={classes.footerTop}>
-					<li className={classes.navMenuItem}>خانه</li>
-					<li className={classes.navMenuItem}>گالری</li>
-					<li className={classes.navMenuItem}>فیلم</li>
-					<li className={classes.navMenuItem}>اخبار</li>
-					<Img fixed={homeIcon} alt="پیشه یار" />
-					<li className={classes.navMenuItem}>سایت پیشه یار</li>
-					<li className={classes.navMenuItem}>ارتباط با ما</li>
-				</div>
-                {/* <div className={classes.footerBottom}></div> */}
-            </footer>
-		</>
-	);
+  return (
+    <>
+      <header className={state ? classes.header : classes.headerToggle}>
+        {state ? (
+          <div className={classes.headerTop}>
+            <Img fixed={homeIcon} alt="پیشه یار" />
+          </div>
+        ) : null}
+        <div
+          className={state ? classes.headerBottom : classes.headerBottomToggle}
+        >
+          {state ? (
+            <div className={classes.headerBottomEmptyDiv}></div>
+          ) : (
+            <Img fixed={homeIcon} alt="پیشه یار" />
+          )}
+          <nav className={classes.nav}>
+            <ul className={classes.navMenu}>
+              {items.map((item) => (
+                <li className={classes.navMenuItem}>
+                  <a className={classes.navMenuItemLink}>{item.name}</a>
+                  <ul className={classes.navSubmenu}>
+                    {item.dropdown
+                      ? item.dropdown.map((drop) => (
+                          <li className={classes.navSubmenuItem}>
+                            <a className={classes.navSubmenuItemLink}>
+                              {drop.name}
+                            </a>
+                          </li>
+                        ))
+                      : null}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          {/* <div className={classes.navbarIcons}> */}
+          <FontAwesomeIcon
+            icon={faSearch}
+            className={classes.headerSearchIcon}
+          />
+          {/* </div> */}
+        </div>
+      </header>
+
+      <main className={classes.blogMain}>{children}</main>
+
+      <footer className={classes.footer}>
+        <div className={classes.footerTop}>
+          <li className={classes.navMenuItem}>خانه</li>
+          <li className={classes.navMenuItem}>گالری</li>
+          <li className={classes.navMenuItem}>فیلم</li>
+          <li className={classes.navMenuItem}>اخبار</li>
+          <Img fixed={homeIcon} alt="پیشه یار" />
+          <li className={classes.navMenuItem}>سایت پیشه یار</li>
+          <li className={classes.navMenuItem}>ارتباط با ما</li>
+        </div>
+        {/* <div className={classes.footerBottom}></div> */}
+      </footer>
+    </>
+  );
 }
 
-{/* <Link to="#" className={classes.navbarIconLink} title="telegram">
+{
+  /* <Link to="#" className={classes.navbarIconLink} title="telegram">
 	<FontAwesomeIcon icon={faTelegram} style={{width: '50px'}} />
 </Link>
 <Link to="#" className={classes.navbarIconLink} title="instagram">
@@ -131,17 +136,20 @@ function Layout({ title, children }) {
 </Link>
 <Link to="#" className={classes.navbarIconLink} title="twitter">
 	<FontAwesomeIcon icon={faTwitter} style={{width: '50px'}} />
-</Link> */}
-{/* <div className={classes.homeLinkContainer}>
+</Link> */
+}
+{
+  /* <div className={classes.homeLinkContainer}>
 	{title !== 'وبلاگ پیشه یار' && (
 		<Link to="/">
 			<Img fluid={homeIcon} alt="بازگشت به صفحه اصلی" />
 		</Link>
 	)}
-</div> */}
+</div> */
+}
 
 Layout.propTypes = {
-	title: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default Layout;

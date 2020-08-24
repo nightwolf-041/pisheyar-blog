@@ -1,6 +1,4 @@
-import React from "react"
+import React from 'react';
 import SEO from '../components/SEO';
 
-export default () => (
-    <div>Hello world!</div>
-) 
+export default () => <div>Hello world!</div>;

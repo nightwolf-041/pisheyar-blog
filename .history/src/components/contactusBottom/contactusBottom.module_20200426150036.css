@@ -1,27 +1,30 @@
 .contactusBottom {
-    width: 100%;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contactusBottomTitle {
-    text-align: center;
-    font-size: 18px;
-    color: #0b1033;
-    margin: 5px 0;
+  text-align: center;
+  font-size: 18px;
+  color: #0b1033;
+  margin: 5px 0;
 }
 
 .contactusBottomSubtitle {
-    text-align: center;
-    font-size: 18px;
-    color: #0b1033;
-    margin: 5px 0;
+  text-align: center;
+  font-size: 18px;
+  color: #0b1033;
+  margin: 5px 0;
 }
 
-.contactusBottomInputBox {}
+.contactusBottomInputBox {
+}
 
-.contactusBottomInputBoxButton {}
+.contactusBottomInputBoxButton {
+}
 
-.contactusBottomInputBoxInput {}
+.contactusBottomInputBoxInput {
+}

@@ -1,9 +1,9 @@
-import React, { useState } from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
-import Img from "gatsby-image"
-import PerfectScrollbar from "react-perfect-scrollbar"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faInternetExplorer } from "@fortawesome/free-brands-svg-icons"
+import React, { useState } from 'react';
+import { useStaticQuery, graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
+import PerfectScrollbar from 'react-perfect-scrollbar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInternetExplorer } from '@fortawesome/free-brands-svg-icons';
 import {
   faAngleLeft,
   faHome,
@@ -12,10 +12,10 @@ import {
   faNewspaper,
   faAddressCard,
   faTimes,
-} from "@fortawesome/free-solid-svg-icons"
+} from '@fortawesome/free-solid-svg-icons';
 
-import "react-perfect-scrollbar/dist/css/styles.css"
-import classes from "./hamburgerMenu.module.css"
+import 'react-perfect-scrollbar/dist/css/styles.css';
+import classes from './hamburgerMenu.module.css';
 
 const HamburgerMenu = (props) => {
   const { header } = useStaticQuery(
@@ -30,15 +30,15 @@ const HamburgerMenu = (props) => {
         }
       }
     `
-  )
+  );
 
-  const headerIcon = header.childImageSharp.fixed
+  const headerIcon = header.childImageSharp.fixed;
 
-  let [toggle, setToggle] = useState(false)
+  let [toggle, setToggle] = useState(false);
 
   const dropdownToggler = () => {
-    setToggle((toggle) => !toggle)
-  }
+    setToggle((toggle) => !toggle);
+  };
 
   return (
     <>
@@ -154,7 +154,7 @@ const HamburgerMenu = (props) => {
         </PerfectScrollbar>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default HamburgerMenu
+export default HamburgerMenu;

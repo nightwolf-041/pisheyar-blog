@@ -1,5 +1,3 @@
-import React from "react"
+import React from 'react';
 
-export default () => (
-    <div>صفحه مورد نظر یافت نشد</div>
-)
+export default () => <div>صفحه مورد نظر یافت نشد</div>;

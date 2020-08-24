@@ -1,49 +1,57 @@
-import React, { useState } from 'react'
-import {  useStaticQuery, graphql } from 'gatsby';
+import React, { useState } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { Scrollbars } from 'react-custom-scrollbars';
-import PerfectScrollbar from 'react-perfect-scrollbar'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInternetExplorer } from "@fortawesome/free-brands-svg-icons";
-import { faAngleLeft, faHome, faLayerGroup, faFilm, faNewspaper, faAddressCard } from "@fortawesome/free-solid-svg-icons";
+import PerfectScrollbar from 'react-perfect-scrollbar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInternetExplorer } from '@fortawesome/free-brands-svg-icons';
+import {
+  faAngleLeft,
+  faHome,
+  faLayerGroup,
+  faFilm,
+  faNewspaper,
+  faAddressCard,
+} from '@fortawesome/free-solid-svg-icons';
 
 import 'react-perfect-scrollbar/dist/css/styles.css';
-import classes from './hamburgerMenu.module.css'
-
+import classes from './hamburgerMenu.module.css';
 
 const HamburgerMenu = (props) => {
+  const { header } = useStaticQuery(
+    graphql`
+      query {
+        header: file(absolutePath: { regex: "/logo-yellow.png/" }) {
+          childImageSharp {
+            fixed(width: 80) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    `
+  );
 
-    const { header } = useStaticQuery(
-		graphql`
-			query {
-				header: file(absolutePath: { regex: "/logo-yellow.png/" }) {
-					childImageSharp {
-						fixed(width: 80) {
-							...GatsbyImageSharpFixed
-						}
-					}
-				}
-			}
-		`
-	);
+  const headerIcon = header.childImageSharp.fixed;
 
-    const headerIcon = header.childImageSharp.fixed;
+  let [toggle, setToggle] = useState(false);
 
-    let [toggle, setToggle] = useState(false)
+  const dropdownToggler = () => {
+    setToggle((toggle) => !toggle);
+  };
 
-    const dropdownToggler = () => {
-        setToggle(toggle => !toggle)
-    }
-    
-
-    return(
-        <>
-        <div className={!props.show ? classes.hamburgerMenu : classes.hamburgerMenuToggle}>
-            <PerfectScrollbar>
-                <div className={classes.hamburgerMenuImageBox}>
-                    <Img fixed={headerIcon} alt="" />
-                </div>
-                {/* <div className={!props.show ?
+  return (
+    <>
+      <div
+        className={
+          !props.show ? classes.hamburgerMenu : classes.hamburgerMenuToggle
+        }
+      >
+        <PerfectScrollbar>
+          <div className={classes.hamburgerMenuImageBox}>
+            <Img fixed={headerIcon} alt="" />
+          </div>
+          {/* <div className={!props.show ?
                     classes.hamburgerMenuItem
                     :classes.hamburgerMenuItemAnimate
                     }>
@@ -104,10 +112,10 @@ const HamburgerMenu = (props) => {
                     <span>درباره ما</span>
                     <FontAwesomeIcon icon={faAddressCard} className={classes.hamburgerMenuItemIcon} />
                 </div> */}
-            </PerfectScrollbar>
-        </div>
-        </>
-    )
-}
+        </PerfectScrollbar>
+      </div>
+    </>
+  );
+};
 
-export default HamburgerMenu
+export default HamburgerMenu;

@@ -1,13 +1,13 @@
-import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import React from 'react';
+import { useStaticQuery, graphql, Link } from 'gatsby';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faInstagram,
   faWhatsapp,
   faLinkedinIn,
-} from "@fortawesome/free-brands-svg-icons"
+} from '@fortawesome/free-brands-svg-icons';
 
-import khale from "../../assets/images/khale.png"
+import khale from '../../assets/images/khale.png';
 
 const PostRightside = (props) => {
   return (
@@ -60,7 +60,7 @@ const PostRightside = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default PostRightside
+export default PostRightside;

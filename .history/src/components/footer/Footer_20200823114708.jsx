@@ -1,21 +1,21 @@
-import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
-import Img from "gatsby-image"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import React from 'react';
+import { useStaticQuery, graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGoogle,
   faWhatsapp,
   faTelegramPlane,
   faInstagram,
-} from "@fortawesome/free-brands-svg-icons"
+} from '@fortawesome/free-brands-svg-icons';
 import {
   faLocationArrow,
   faPhoneAlt,
   faRss,
   faSitemap,
-} from "@fortawesome/free-solid-svg-icons"
+} from '@fortawesome/free-solid-svg-icons';
 
-import classes from "./footer.module.css"
+import classes from './footer.module.css';
 
 const Footer = () => {
   const { footer } = useStaticQuery(
@@ -30,9 +30,9 @@ const Footer = () => {
         }
       }
     `
-  )
+  );
 
-  const homeIconFooter = footer.childImageSharp.fixed
+  const homeIconFooter = footer.childImageSharp.fixed;
 
   return (
     <footer className={classes.footer}>
@@ -273,7 +273,7 @@ const Footer = () => {
         {/* <div className={classes.footerBottom}></div> */}
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

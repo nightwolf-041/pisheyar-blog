@@ -1,19 +1,19 @@
 @font-face {
-    font-family: Yekan;
-    src: url('../assets/fonts/iran-yekan/iranyekan.woff2');
-    src: url('../assets/fonts/iran-yekan/iranyekan.ttf');
+  font-family: Yekan;
+  src: url('../assets/fonts/iran-yekan/iranyekan.woff2');
+  src: url('../assets/fonts/iran-yekan/iranyekan.ttf');
 }
 
 body {
-    margin: 0 auto;
-    font-family: Yekan;
-    overflow-x: hidden !important;
+  margin: 0 auto;
+  font-family: Yekan;
+  overflow-x: hidden !important;
 }
 
 header {
-    width: 100%;
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

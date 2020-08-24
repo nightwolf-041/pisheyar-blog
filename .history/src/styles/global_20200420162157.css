@@ -1,12 +1,12 @@
 @font-face {
-    font-family: Yekan;
-    src: url('../assets/fonts/iran-yekan/iranyekan.woff2');
-    src: url('../assets/fonts/iran-yekan/iranyekan.ttf');
+  font-family: Yekan;
+  src: url('../assets/fonts/iran-yekan/iranyekan.woff2');
+  src: url('../assets/fonts/iran-yekan/iranyekan.ttf');
 }
 
 body {
-    direction: rtl;
-    margin: 0 auto;
-    font-family: Yekan;
-    overflow-x: hidden !important;
+  direction: rtl;
+  margin: 0 auto;
+  font-family: Yekan;
+  overflow-x: hidden !important;
 }

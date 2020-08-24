@@ -1,153 +1,153 @@
 @font-face {
-    font-family: Yekan;
-    src: url('../assets/fonts/iran-yekan/iranyekan.woff2');
+  font-family: Yekan;
+  src: url('../assets/fonts/iran-yekan/iranyekan.woff2');
 }
 
 body {
-    margin: 0 auto;
-    font-family: Yekan !important;
-    overflow-x: hidden !important;
+  margin: 0 auto;
+  font-family: Yekan !important;
+  overflow-x: hidden !important;
 }
 
 *,
 * * {
-    font-family: Yekan !important;
+  font-family: Yekan !important;
 }
 
 .notfound-title {
-    margin-top: 150px;
-    text-align: right;
+  margin-top: 150px;
+  text-align: right;
 }
 
 .notfound-subtitle {
-    text-align: right;
+  text-align: right;
 }
 
 .swiper-container {
-    height: 360px !important;
+  height: 360px !important;
 }
 
 .gallery-slider-divider {
-    text-align: right;
-    width: 100%;
-    margin: 45px 0;
-    padding-right: 15px;
+  text-align: right;
+  width: 100%;
+  margin: 45px 0;
+  padding-right: 15px;
 }
 
 .gallery-slider-divider::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 70%;
-    height: 1px;
-    background-color: #ccc;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 70%;
+  height: 1px;
+  background-color: #ccc;
 }
 
-.asd {}
-
+.asd {
+}
 
 /*TODO: prefix rtansition */
 
 .swiper-button-next {
-    background-color: rgb(36, 73, 141) !important;
-    border-radius: 100%;
-    margin-right: -50px;
-    cursor: pointer;
-    z-index: 2;
-    width: 90px !important;
-    height: 90px !important;
-    -webkit-box-shadow: 0px 0px 90px 26px rgba(65, 62, 194, 1);
-    -moz-box-shadow: 0px 0px 90px 26px rgba(65, 62, 194, 1);
-    box-shadow: 0px 0px 90px 26px rgba(65, 62, 194, 1);
-    transition: 0.2s all ease-in;
+  background-color: rgb(36, 73, 141) !important;
+  border-radius: 100%;
+  margin-right: -50px;
+  cursor: pointer;
+  z-index: 2;
+  width: 90px !important;
+  height: 90px !important;
+  -webkit-box-shadow: 0px 0px 90px 26px rgba(65, 62, 194, 1);
+  -moz-box-shadow: 0px 0px 90px 26px rgba(65, 62, 194, 1);
+  box-shadow: 0px 0px 90px 26px rgba(65, 62, 194, 1);
+  transition: 0.2s all ease-in;
 }
 
 .swiper-button-next:hover {
-    width: 97px !important;
-    height: 97px !important;
-    transition: 0.2s all ease-in;
+  width: 97px !important;
+  height: 97px !important;
+  transition: 0.2s all ease-in;
 }
 
 .swiper-button-prev {
-    background-color: rgb(36, 73, 141) !important;
-    border-radius: 100%;
-    margin-left: -50px;
-    cursor: pointer;
-    z-index: 2;
-    width: 90px !important;
-    height: 90px !important;
-    -webkit-box-shadow: 0px 0px 90px 26px rgba(65, 62, 194, 1);
-    -moz-box-shadow: 0px 0px 90px 26px rgba(65, 62, 194, 1);
-    box-shadow: 0px 0px 90px 26px rgba(65, 62, 194, 1);
-    transition: 0.2s all ease-in;
+  background-color: rgb(36, 73, 141) !important;
+  border-radius: 100%;
+  margin-left: -50px;
+  cursor: pointer;
+  z-index: 2;
+  width: 90px !important;
+  height: 90px !important;
+  -webkit-box-shadow: 0px 0px 90px 26px rgba(65, 62, 194, 1);
+  -moz-box-shadow: 0px 0px 90px 26px rgba(65, 62, 194, 1);
+  box-shadow: 0px 0px 90px 26px rgba(65, 62, 194, 1);
+  transition: 0.2s all ease-in;
 }
 
 .swiper-button-prev:hover {
-    width: 97px !important;
-    height: 97px !important;
-    transition: 0.2s all ease-in;
+  width: 97px !important;
+  height: 97px !important;
+  transition: 0.2s all ease-in;
 }
 
 .swiper-button-next:after {
-    font-size: 32px !important;
-    color: rgb(221, 149, 66);
-    margin-right: 32px;
+  font-size: 32px !important;
+  color: rgb(221, 149, 66);
+  margin-right: 32px;
 }
 
 .swiper-button-prev:after {
-    font-size: 32px !important;
-    color: rgb(221, 149, 66);
-    margin-left: 32px;
+  font-size: 32px !important;
+  color: rgb(221, 149, 66);
+  margin-left: 32px;
 }
 
 .swiper-pagination {
-    display: none;
+  display: none;
 }
 
 @media screen and (max-width: 420px) {
-    .swiper-button-next {
-        background-color: rgb(36, 73, 141) !important;
-        border-radius: 100%;
-        margin-right: -20px;
-        cursor: pointer;
-        z-index: 2;
-        width: 50px !important;
-        height: 50px !important;
-        -webkit-box-shadow: 0px 0px 90px 14px rgba(65, 62, 194, 1);
-        -moz-box-shadow: 0px 0px 90px 14px rgba(65, 62, 194, 1);
-        box-shadow: 0px 0px 90px 14px rgba(65, 62, 194, 1);
-        transition: 0.2s all ease-in;
-    }
-    .swiper-button-next:hover {
-        width: 57px !important;
-        height: 57px !important;
-        transition: 0.2s all ease-in;
-    }
-    .swiper-button-prev {
-        background-color: rgb(36, 73, 141) !important;
-        border-radius: 100%;
-        margin-left: -20px;
-        cursor: pointer;
-        z-index: 2;
-        width: 50px !important;
-        height: 50px !important;
-        -webkit-box-shadow: 0px 0px 90px 14px rgba(65, 62, 194, 1);
-        -moz-box-shadow: 0px 0px 90px 14px rgba(65, 62, 194, 1);
-        box-shadow: 0px 0px 90px 14px rgba(65, 62, 194, 1);
-        transition: 0.2s all ease-in;
-    }
-    .swiper-button-prev:hover {
-        width: 57px !important;
-        height: 57px !important;
-        transition: 0.2s all ease-in;
-    }
-    .swiper-button-next:after {
-        font-size: 22px !important;
-        color: rgb(221, 149, 66);
-    }
-    .swiper-button-prev:after {
-        font-size: 22px !important;
-        color: rgb(221, 149, 66);
-    }
+  .swiper-button-next {
+    background-color: rgb(36, 73, 141) !important;
+    border-radius: 100%;
+    margin-right: -20px;
+    cursor: pointer;
+    z-index: 2;
+    width: 50px !important;
+    height: 50px !important;
+    -webkit-box-shadow: 0px 0px 90px 14px rgba(65, 62, 194, 1);
+    -moz-box-shadow: 0px 0px 90px 14px rgba(65, 62, 194, 1);
+    box-shadow: 0px 0px 90px 14px rgba(65, 62, 194, 1);
+    transition: 0.2s all ease-in;
+  }
+  .swiper-button-next:hover {
+    width: 57px !important;
+    height: 57px !important;
+    transition: 0.2s all ease-in;
+  }
+  .swiper-button-prev {
+    background-color: rgb(36, 73, 141) !important;
+    border-radius: 100%;
+    margin-left: -20px;
+    cursor: pointer;
+    z-index: 2;
+    width: 50px !important;
+    height: 50px !important;
+    -webkit-box-shadow: 0px 0px 90px 14px rgba(65, 62, 194, 1);
+    -moz-box-shadow: 0px 0px 90px 14px rgba(65, 62, 194, 1);
+    box-shadow: 0px 0px 90px 14px rgba(65, 62, 194, 1);
+    transition: 0.2s all ease-in;
+  }
+  .swiper-button-prev:hover {
+    width: 57px !important;
+    height: 57px !important;
+    transition: 0.2s all ease-in;
+  }
+  .swiper-button-next:after {
+    font-size: 22px !important;
+    color: rgb(221, 149, 66);
+  }
+  .swiper-button-prev:after {
+    font-size: 22px !important;
+    color: rgb(221, 149, 66);
+  }
 }
